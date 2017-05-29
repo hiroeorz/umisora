@@ -4,9 +4,8 @@ export interface Props {
     content: string;
 }
 
-export default class MyComponent extends React.Component<Props, {}> {
+export default class NavClass extends React.Component<Props, {}> {
     render() {
         return <div>{this.props.content}</div>
     }
 }
-
