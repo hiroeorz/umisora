@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/index.tsx',
+    entry: './src/Index.tsx',
     output: {
 	      filename: './dist/bundle.js'
     },
@@ -14,12 +14,7 @@ module.exports = {
 		            use: [
 		                {loader: 'ts-loader'}
 		            ]
-	          },
-            {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                loader: 'tslint-loader'
-            }
+	          }
 	      ]
     }
 };
