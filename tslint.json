@@ -1,0 +1,24 @@
+{
+    "rules": {
+        "no-any": true,                             /* any型を許容しない */
+        "align": "parameters",                      /* 複数行にわたって引数を並べる時に縦に並んでいること */
+        "class-name": true,                         /* クラス名とインターフェース名にパスカルケースを使用していること */
+        "indent": "spaces",                         /* インデントが全てスペースであること */
+        "member-access": true,                      /* public, protected, privateのいずれかがメンバに付いていること */
+        "max-line-length": [true, 120],             /* 1行は最大120文字に制限 */
+        "no-console": [true,                        /* consoleは許可しない */
+                       "debug",
+                       "info",
+                       "time",
+                       "timeEnd",
+                       "trace"
+                      ],
+        "whitespace": [true,                        /* ホワイトスペースを許可しない */
+                       "check-branch",
+                       "check-decl",
+                       "check-operator",
+                       "check-separator"
+                      ],
+        "member-ordering": "public-before-private"  /* publicメンバがはじめに来て、そのあとprivateメンバの並びになっていること*/
+    }
+}
