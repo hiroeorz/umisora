@@ -10,3 +10,7 @@ check:
 
 watch:
 	npm run watch
+
+clean:
+	rm -f dist/bundle.js
+	rm -f dist/bundle.js.map

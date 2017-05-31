@@ -14,7 +14,8 @@
     },
 
     "files": [
-        "./src/index.tsx",
-        "./src/Hello.tsx"
+        "./src/Index.tsx",
+        "./src/Content.tsx",
+        "./src/Nav.tsx"
     ]
 }

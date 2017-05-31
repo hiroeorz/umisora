@@ -14,7 +14,12 @@ module.exports = {
 		            use: [
 		                {loader: 'ts-loader'}
 		            ]
-	          }
+	          },
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                loader: 'tslint-loader'
+            }
 	      ]
     }
 };

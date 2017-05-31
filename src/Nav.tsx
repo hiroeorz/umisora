@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export interface NavClassProps {
+export interface NavProps {
   title: string;
   value?: string;
 }
@@ -11,11 +11,11 @@ export interface NavState {
   navScheduleClass: string;
 }
 
-export default class NavClass extends React.Component<NavClassProps, NavState> {
+export default class NavComponent extends React.Component<NavProps, NavState> {
 
   public state: NavState = {navTopClass: "active", navWAClass: "", navScheduleClass: ""};
 
-  constructor(props: NavClassProps) {
+  constructor(props: NavProps) {
     super(props);
   }
 
@@ -41,20 +41,23 @@ export default class NavClass extends React.Component<NavClassProps, NavState> {
   }
 
   private gotoTop(_evt: React.FormEvent<HTMLSelectElement>): void {
+    this.clearSelected();
     this.setState({navTopClass: "active"});
-    this.setState({navWAClass: ""});
-    this.setState({navScheduleClass: ""});
   }
 
   private gotoWaterAnalysis(_evt: React.FormEvent<HTMLSelectElement>): void {
-    this.setState({navTopClass: ""});
+    this.clearSelected();
     this.setState({navWAClass: "active"});
-    this.setState({navScheduleClass: ""});
   }
 
   private gotoSchedule(_evt: React.FormEvent<HTMLSelectElement>): void {
+    this.clearSelected();
+    this.setState({navScheduleClass: "active"});
+  }
+
+  private clearSelected(): void {
     this.setState({navTopClass: ""});
     this.setState({navWAClass: ""});
-    this.setState({navScheduleClass: "active"});
+    this.setState({navScheduleClass: ""});
   }
 }
