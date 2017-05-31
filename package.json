@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --colors --config ./webpack.config.dev.js",
     "build:prod": "webpack --config ./webpack.config.prod.js",
-    "lint": "tslint src/*.ts src/*.tsx"
+    "lint": "tslint src/*.ts src/*.tsx",
+    "watch":  "watch 'make' src/"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "tslint": "^5.3.2",
     "typescript": "2.3.2",
     "typescript-eslint-parser": "github:eslint/typescript-eslint-parser",
+    "watch": "^1.0.2",
     "webpack": "2.5.1"
   },
   "dependencies": {
